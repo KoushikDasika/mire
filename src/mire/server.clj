@@ -1,5 +1,6 @@
 (ns mire.server
   (:use [mire.player]
+		[mire.http]
         [mire.commands :only [discard look execute]]
         [mire.rooms :only [add-rooms rooms]])
   (:use [clojure.java.io :only [reader writer]]
@@ -52,4 +53,4 @@
      (defonce server (create-server (Integer. port) mire-handle-client))
      (println "Launching Mire server on port" port))
   ([port] (-main port "resources/rooms"))
-  ([] (-main 3333)))
+  ([] (-main (Integer/parseInt (get (System/getenv) "PORT" "3333")))))

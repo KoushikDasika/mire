@@ -1,6 +1,7 @@
 (ns mire.commands
   (:use [mire.rooms :only [rooms room-contains?]]
-        [mire.player])
+        [mire.player]
+		[mire.http])
   (:use [clojure.string :only [join]]))
 
 (defn- move-between-refs
@@ -82,6 +83,15 @@
         (println prompt)))
     (str "You said " message)))
 
+(defn wield
+  "Try to use an item"
+	[thing]
+	(if (carrying? thing)
+		(testthis)
+	(str "You can't use something you don't have"))
+)
+
+
 (defn help
   "Show available commands and what they do."
   []
@@ -102,6 +112,7 @@
                "detect" detect
                "look" look
                "say" say
+			   "wield" wield,
                "help" help})
 
 ;; Command handling

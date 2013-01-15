@@ -1,3 +1,3 @@
-{:desc "You are in a cramped closet."
+{:desc "You are in a cramped closet. The shelves are filled with poorly executed Makerbot prototypes. Clearly this is hacker hell. As your eyes adjust to the darkness you notice the glow of a cellphone screen ... it's a brand new Galaxy Nexus! Just like the one you won at API Hackday!!"
  :exits {:south :start}
- :items #{:keys}}
+ :items #{:phone}}

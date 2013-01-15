@@ -1,10 +1,15 @@
-# Some Snappy Name Here
+# BRIER
 
 This is an extension of Phil Hagelberg's Mire that can interact with the real world via HTTP requests. Done for API Hackday January 12, 2013
 
 # Mire
 
 It's a nonviolent MUD. (Multi-User Dungeon)
+
+##Todos
+-Tweak Ordrin's calls to take an input address. Address was hard coded in for the event to make the demo easier to run.
+-Take the Menu output one step further to print children of each heading
+-Add user interactions
 
 ## Usage
 

@@ -1,0 +1,10 @@
+;;;Template of Keys
+;;Add Relevant keys here and rename this file "keys.clj"
+
+(ns config.keys)
+
+(def twilio-sid "")
+
+(def twilio-token "")
+
+(def espn-key "")

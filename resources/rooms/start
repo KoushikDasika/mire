@@ -1,2 +1,3 @@
-{:desc "You find yourself in a round room with a pillar in the middle."
- :exits {:north :closet :south :hallway}}
+{:desc "You find yourself in a room with two doors on either side. The only light is coming from a glowing computer screen, the skeleton of an expired hacker sat in front of it, the words 'Cannot Authenticate - malformed signature' on the screen. OAuth 2.0 has claimed another victim."
+ :exits {:north :closet :south :hallway}
+}

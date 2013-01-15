@@ -1,3 +1,3 @@
-{:desc "The promenade stretches out before you."
- :exits {:west :hallway}
- :items #{:bunny :turtle}}
+{:desc "You now find yourself in a large library. Programming books are stacked from floor to ceiling ... clearly Tim O'Reilly will not be going hungry anytime soon."
+ :exits {:west :hallway :south :kitchen}
+ :items #{:zagats :newspaper}}

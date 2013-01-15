@@ -2,3 +2,4 @@ mire-*.jar
 lib/
 classes/
 target/
+src/config/keys.clj

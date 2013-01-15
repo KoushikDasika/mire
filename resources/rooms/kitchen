@@ -1,0 +1,3 @@
+{:desc "This is the kitchen. Help yourself to the free pizza and beer, like this hackathon you are going to be here awhile."
+ :exits {:north :promenade}
+ }

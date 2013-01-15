@@ -2,8 +2,8 @@
   (:use [mire.player]
 		[mire.http]
         [mire.commands :only [discard look execute]]
-        [mire.rooms :only [add-rooms rooms]])
-  (:use [clojure.java.io :only [reader writer]]
+        [mire.rooms :only [add-rooms rooms]]
+  		[clojure.java.io :only [reader writer]]
         [server.socket :only [create-server]]))
 
 (defn- cleanup []
@@ -41,7 +41,12 @@
 
       (try (loop [input (read-line)]
              (when input
-               (println (execute input))
+               (let [output (execute input)]
+				(if (= output nil)
+					(println "\n")
+					(println output)
+				)
+				)
                (.flush *err*)
                (print prompt) (flush)
                (recur (read-line))))
@@ -53,4 +58,4 @@
      (defonce server (create-server (Integer. port) mire-handle-client))
      (println "Launching Mire server on port" port))
   ([port] (-main port "resources/rooms"))
-  ([] (-main (Integer/parseInt (get (System/getenv) "PORT" "3333")))))
+  ([] (-main 3333)))

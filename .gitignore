@@ -3,3 +3,4 @@ lib/
 classes/
 target/
 src/config/keys.clj
+.DS_Store
